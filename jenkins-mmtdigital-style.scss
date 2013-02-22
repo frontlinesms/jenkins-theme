@@ -1,19 +1,26 @@
+// I gather this file is a starting point for the project.
+@import "lib/bootstrap";
+
+// Include responsive Bootstrap styles
+// @import "bootstrap-responsive";
+
 $headings-color: #4f7b94;
 $body-background: #aabeca;
 $body-background-bottom: #f8faf0;
 $candy-stripe1: #fff;
 $candy-stripe2: #e5e5e5;
 $candy-stripe-hover: #f0f0f0;
-$logo: "http://www.isotope11.com/assets/isotope_logo.png";
+$logo: "https://dl.dropbox.com/u/11955223/mmt-digital-logo.png";
 
 body {
-	background: $body-background;
-	background: -moz-linear-gradient(top, $body-background 0%, $body-background-bottom 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$body-background), color-stop(100%,$body-background-bottom));
-	background: -webkit-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: -o-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: -ms-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+  background: $white;
+	// background: $body-background;
+	// background: -moz-linear-gradient(top, $body-background 0%, $body-background-bottom 100%);
+	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$body-background), color-stop(100%,$body-background-bottom));
+	// background: -webkit-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -o-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -ms-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
 }
 
 h1, h2, h3, h4, h5, h6{
