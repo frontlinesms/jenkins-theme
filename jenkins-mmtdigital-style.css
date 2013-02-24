@@ -4855,8 +4855,16 @@ h1 {
 
 #top-panel {
   background: white; }
-  #top-panel td#login-field span a {
-    background: none; }
+  #top-panel a {
+    color: #ee2e24; }
+    #top-panel a:hover {
+      text-decoration: underline; }
+  #top-panel td#login-field {
+    padding-right: 20px; }
+    #top-panel td#login-field span {
+      color: #ee2e24; }
+      #top-panel td#login-field span a {
+        background: none; }
   #top-panel td #searchform a {
     background: none;
     height: auto;
@@ -4904,8 +4912,10 @@ h1 {
   padding: 3px;
   border: 1px solid #cccccc; }
 
-form #searchform a {
-  display: none; }
+form {
+  margin: 0; }
+  form #searchform a {
+    display: none; }
 
 #projectstatus {
   background: #fafafa; }
@@ -4922,7 +4932,8 @@ form #searchform a {
   border-left: none; }
 
 #side-panel {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  padding: 0 0 0 20px; }
   #side-panel > div:not(#navigation) {
     display: none; }
   #side-panel .task a {
@@ -4938,7 +4949,8 @@ form #searchform a {
       text-decoration: underline; }
 
 #main-panel {
-  background: #fafafa; }
+  background: #fafafa;
+  padding: 0 20px; }
   #main-panel > h1 {
     margin-top: 0; }
 

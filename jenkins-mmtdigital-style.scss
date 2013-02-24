@@ -37,13 +37,24 @@ h1 {
 
 #top-panel{
 	background: $body-background;
-	td#login-field {
-		span {
-			a {
-				background:none;
-			}
-		}
-	}
+  a {
+    color: $mmt-red;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  td {
+    &#login-field {
+      padding-right: 20px;
+      span {
+        color: $mmt-red;
+        a {
+          background:none;
+        }
+      }
+    }
+  }
   td {
 		#searchform {
 			a {
@@ -109,6 +120,7 @@ h1 {
   border: 1px solid #ccc;
 }
 form {
+  margin: 0;
   #searchform {
     a {
       display: none;
@@ -138,6 +150,7 @@ form {
 
 #side-panel{
   background-color: $content-background-light;
+  padding: 0 0 0 20px;
   >div:not(#navigation){
     display: none;
   }
@@ -161,6 +174,7 @@ form {
 }
 #main-panel {
 	background: $content-background-light;
+  padding: 0 20px;
   &>h1{
     margin-top: 0;
   }
