@@ -1,19 +1,29 @@
+// I gather this file is a starting point for the project.
+@import "lib/bootstrap";
+
+// Include responsive Bootstrap styles
+// @import "bootstrap-responsive";
+
+$mmt-grey: #AEBCBC;
+$mmt-red: #EE2E24;
 $headings-color: #4f7b94;
-$body-background: #aabeca;
-$body-background-bottom: #f8faf0;
-$candy-stripe1: #fff;
-$candy-stripe2: #e5e5e5;
-$candy-stripe-hover: #f0f0f0;
-$logo: "http://www.isotope11.com/assets/isotope_logo.png";
+$body-background: #ffffff;
+$content-background: darken(#ffffff, 5%);
+//$body-background-bottom: #f8faf0;
+$candy-stripe1: $tableBackground;
+$candy-stripe2: $tableBackgroundAccent;
+$candy-stripe-hover: $tableBackgroundHover;
+$logo: "https://dl.dropbox.com/u/11955223/mmt-digital-logo.png";
 
 body {
-	background: $body-background;
-	background: -moz-linear-gradient(top, $body-background 0%, $body-background-bottom 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$body-background), color-stop(100%,$body-background-bottom));
-	background: -webkit-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: -o-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: -ms-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
-	background: linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+  background: $body-background;
+	// background: $body-background;
+	// background: -moz-linear-gradient(top, $body-background 0%, $body-background-bottom 100%);
+	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$body-background), color-stop(100%,$body-background-bottom));
+	// background: -webkit-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -o-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -ms-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -38,7 +48,7 @@ h1, h2, h3, h4, h5, h6{
 			}
 		}
     &>a {
-			background:url($logo) 0 0 no-repeat;
+			background:url($logo) 8px 4px no-repeat;
 			display:block;
 			height: 85px;
 			width: 276px;
@@ -49,8 +59,50 @@ h1, h2, h3, h4, h5, h6{
     }
   }
 }
+.top-sticker-inner {
+  background: $content-background;
+}
+#top-nav {
+  // override the existing background
+  #breadcrumbs {
+    border-bottom: none;
+    li {
+      a {
+        background-image: none;
+      }
+    }
+  }
+  #breadcrumbs, .smallfont {
+    padding: 8px 15px;
+    margin: 0 0 $baseLineHeight;
+    list-style: none;
+    background-color: #f5f5f5;
+    @include border-radius($baseBorderRadius);
+    > li {
+      display: inline-block;
+      @include ie7-inline-block();
+      text-shadow: 0 1px 0 $white;
+      > .divider {
+        padding: 0 5px;
+        color: #ccc;
+      }
+    }
+    .active {
+      color: $grayLight;
+    }
+  }
+  .smallfont {
+    a, a:link, a:active, a:visited {
+      text-decoration: none;
+    }
+  }
+}
+#search-box {
+  background: none;
+  padding: 3px;
+}
 #projectstatus {
-	background: #fff;
+	background: $content-background;
   tr{
     &:nth-of-type(odd) {
       background-color:$candy-stripe2;
@@ -71,7 +123,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #side-panel{
-  background-color: #fff;
+  background-color: $body-background;
   >div:not(#navigation){
     display: none;
   }
@@ -94,7 +146,7 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 #main-panel {
-	background:#fff;
+	background: $body-background;
   &>h1{
     margin-top: 0;
   }
@@ -109,7 +161,16 @@ h1, h2, h3, h4, h5, h6{
 	}
 }
 #footer {
-	border-top:1px solid #ccc;
+	border-top: none;
+  font-family:"Courier New", Courier, monospace;
+
+  #l10n-footer {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 #view-message{
   #description{
