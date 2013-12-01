@@ -11,18 +11,18 @@ using [Sass][sass].
 Here's an example of what this project will make your jenkins look like
 
 #### Our style
-![Jenkins Isotope Style](https://raw.github.com/mmtdigital/jenkins-mmtdigital-style/master/doc/jenkins_mmtdigital_style.png)
+![Jenkins Isotope Style](https://raw.github.com/mmtdigital/jenkins-theme/master/doc/jenkins_mmtdigital_style.png)
 
 #### Stock Jenkins
 This is what it looks like standard.
-![Stock Jenkins](https://raw.github.com/mmtdigital/Jenkins-mmtdigital-style/master/doc/jenkins_stock.png)
+![Stock Jenkins](https://raw.github.com/mmtdigital/jenkins-theme/master/doc/jenkins_stock.png)
 
 ### Using it for your organization
 So this easy for you to modify and use for your own organization.  Here are the
 steps you'd need to take.
 
 1. Install the [Jenkins Simple Theme Plugin][simple_theme].
-2. Set your custom css to `http://mmtdigital.github.com/jenkins-mmtdigital-style/jenkins-mmtdigital-style.css`
+2. Set your custom css to `http://mmtdigital.github.com/jenkins-theme/jenkins-mmtdigital-style.css`
 3. Fork our project, make your own changes (pull requests welcome!), add your
 organization's logo and colors.
 4. Run the ruby script provided to publish your stylesheet to github-pages for
