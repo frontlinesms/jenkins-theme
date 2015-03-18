@@ -1,0 +1,224 @@
+// I gather this file is a starting point for the project.
+@import "lib/bootstrap";
+
+// Include responsive Bootstrap styles
+// @import "bootstrap-responsive";
+
+$mmt-grey: #AEBCBC;
+$mmt-red: #EE2E24;
+$headings-color: #4f7b94;
+$body-background: #ffffff;
+$content-background: darken(#ffffff, 5%);
+$content-background-light: darken(#ffffff, 2%);
+//$body-background-bottom: #f8faf0;
+$candy-stripe1: $tableBackground;
+$candy-stripe2: $tableBackgroundAccent;
+$candy-stripe-hover: $tableBackgroundHover;
+$logo: "https://dl.dropbox.com/u/11955223/mmt-digital-logo.png";
+
+body {
+  background: $content-background-light;
+	// background: $body-background;
+	// background: -moz-linear-gradient(top, $body-background 0%, $body-background-bottom 100%);
+	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$body-background), color-stop(100%,$body-background-bottom));
+	// background: -webkit-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -o-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: -ms-linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+	// background: linear-gradient(top, $body-background 0%,$body-background-bottom 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $headings-color;
+}
+
+h1,
+h2,
+h3 { line-height: $baseLineHeight * 1.4; }
+
+h1 { font-size: $baseFontSize * 1.75; } 
+h2 { font-size: $baseFontSize * 1.25; } 
+h3 { font-size: $baseFontSize * 1; } 
+h4 { font-size: $baseFontSize * 1; } 
+h5 { font-size: $baseFontSize; }
+h6 { font-size: $baseFontSize * 0.85; } 
+
+h1 small { font-size: $baseFontSize * 1.5; } 
+h2 small { font-size: $baseFontSize * 1; } 
+h3 small { font-size: $baseFontSize; }
+h4 small { font-size: $baseFontSize; }
+
+
+#top-panel{
+	background: $body-background;
+  a {
+    color: $mmt-red;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  td {
+    &#login-field {
+      padding-right: 20px;
+      span {
+        color: $mmt-red;
+        a {
+          background:none;
+        }
+      }
+    }
+  }
+  td {
+		#searchform {
+			a {
+				background:none;
+				height: auto;
+				width: auto;
+			}
+		}
+    &>a {
+			background:url($logo) 8px 4px no-repeat;
+			display:block;
+			height: 85px;
+			width: 276px;
+			margin: 10px 0 0 10px;
+      img {
+        display:none;
+      }
+    }
+  }
+}
+.top-sticker-inner {
+  background: $content-background;
+}
+#top-nav {
+  // override the existing background
+  #breadcrumbs {
+    border-top: 1px solid darken($content-background, 10%);
+    border-bottom: 1px solid darken($content-background, 10%);
+    li {
+      a {
+        background-image: none;
+      }
+    }
+  }
+  #breadcrumbs, .smallfont {
+    padding: 8px 15px;
+    // margin: 0 0 $baseLineHeight;
+    list-style: none;
+    // background-color: #f5f5f5;
+    @include border-radius($baseBorderRadius);
+    > li {
+      display: inline-block;
+      @include ie7-inline-block();
+      text-shadow: 0 1px 0 $white;
+      > .divider {
+        padding: 0 5px;
+        color: #ccc;
+      }
+    }
+    .active {
+      color: $grayLight;
+    }
+  }
+  .smallfont {
+    a, a:link, a:active, a:visited {
+      text-decoration: none;
+    }
+  }
+}
+#search-box {
+  background: none;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+form {
+  margin: 0;
+  #searchform {
+    a {
+      display: none;
+    }
+  }
+}
+#projectstatus {
+	background: $content-background-light;
+  tr{
+    &:nth-of-type(odd) {
+      background-color:$candy-stripe2;
+      &:hover{
+        background-color: $candy-stripe-hover;
+      }
+    }
+    &:nth-of-type(even) {
+      background-color:$candy-stripe1;
+      &:hover{
+        background-color: $candy-stripe-hover;
+      }
+    }
+  }
+}
+#left-top-nav {
+	border-left: none;
+}
+
+#side-panel{
+  background-color: $content-background-light;
+  padding: 0 0 0 20px;
+  >div:not(#navigation){
+    display: none;
+  }
+  .task{
+    a{
+      display: inline-block;
+      text-decoration: none;
+      width: 10%;
+      &+a{
+        width: 83%;
+        padding: 4px;
+        &:hover{
+          background-color: $candy-stripe2;
+        }
+      }
+      &:hover{
+        text-decoration: underline
+      }
+    }
+  }
+}
+#main-panel {
+	background: $content-background-light;
+  padding: 0 20px;
+  &>h1{
+    margin-top: 0;
+  }
+}
+#main-table {
+	border-top:0;
+	border-bottom:0;
+}
+#description {
+	&>div {
+	font-size: 1.3em;
+	}
+}
+#footer {
+	border-top: none;
+  font-family:"Courier New", Courier, monospace;
+
+  #l10n-footer {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+#view-message{
+  #description{
+    a{
+      img{
+        padding-right: 4px;
+      }
+    }
+  }
+}

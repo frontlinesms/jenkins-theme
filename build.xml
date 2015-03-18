@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Jenkins CSS Style" default="compile" basedir=".">
+    <target name="compile" depends="compileCSS"/>
+    <target name="compileCSS">
+        <echo>Beginning CSS compilation process...</echo>
+        <exec osfamily="windows" executable="cmd" failonerror="true">
+            <arg line="/c sass jenkins-mmtdigital-style.scss:jenkins-mmtdigital-style.css --trace --style compressed"/>
+        </exec>
+        <exec osfamily="unix" executable="/usr/bin/sass" failonerror="true">
+            <arg line="jenkins-mmtdigital-style.scss:jenkins-mmtdigital-style.css --trace --style compressed"/>
+        </exec>
+        <echo>CSS compilation complete.</echo>
+    </target>
+</project>
